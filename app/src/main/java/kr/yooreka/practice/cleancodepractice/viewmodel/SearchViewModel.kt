@@ -1,8 +1,11 @@
 package kr.yooreka.practice.cleancodepractice.viewmodel
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kr.yooreka.practice.domain.usecase.SearchUseCase
+import javax.inject.Inject
 
-class SearchViewModel(val searchUseCase : SearchUseCase) : ViewModel() {
+@HiltViewModel
+class SearchViewModel @Inject constructor(private val searchUseCase : SearchUseCase) : ViewModel() {
 
 }

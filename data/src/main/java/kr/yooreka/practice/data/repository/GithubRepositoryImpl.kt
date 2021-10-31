@@ -7,8 +7,9 @@ import kr.yooreka.practice.data.datastore.GithubService
 import kr.yooreka.practice.domain.model.ReposVO
 import kr.yooreka.practice.domain.model.UserVO
 import kr.yooreka.practice.domain.repository.GithubRepository
+import javax.inject.Inject
 
-class GithubRepositoryImpl(private val service : GithubService) : GithubRepository {
+class GithubRepositoryImpl @Inject constructor(private val service : GithubService) : GithubRepository {
     override fun searchUser(query: String, page: Int): Single<List<UserVO>> {
         return service.searchUser(query, page)
             .map(UserMapper::transform)
