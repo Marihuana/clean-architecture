@@ -10,6 +10,5 @@ java {
 
 dependencies {
     // rx
-//    implementation (ReactiveX.RX_KOTLIN)
-    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.1'
+    implementation (ReactiveX.RX_KOTLIN)
 }
