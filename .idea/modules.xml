@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CleanCodePractice.iml" filepath="$PROJECT_DIR$/.idea/modules/CleanCodePractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CleanCodePractice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CleanCodePractice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CleanCodePractice.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/CleanCodePractice.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/CleanCodePractice.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/CleanCodePractice.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/CleanCodePractice.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/CleanCodePractice.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presentation/CleanCodePractice.presentation.iml" filepath="$PROJECT_DIR$/.idea/modules/presentation/CleanCodePractice.presentation.iml" />
     </modules>
   </component>
 </project>

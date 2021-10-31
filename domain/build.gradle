@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    // rx
+//    implementation (ReactiveX.RX_KOTLIN)
+    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.1'
+}

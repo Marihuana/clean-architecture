@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="CleanCodePractice.app" target="11" />
+      <module name="CleanCodePractice.buildSrc" target="11" />
+      <module name="CleanCodePractice.data" target="11" />
+      <module name="CleanCodePractice.network" target="1.8" />
+      <module name="CleanCodePractice.presentation" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
