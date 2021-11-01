@@ -24,6 +24,14 @@ dependencies {
     implementation AndroidX.LIFECYCLE_VIEWMODEL_KTX
     implementation AndroidX.LIFECYCLE_LIVEDATA_KTX
 
+    // rx
+    implementation (ReactiveX.RX_KOTLIN)
+
+    // retrofit
+    implementation (Libraries.RETROFIT)
+    // okhttp
+    implementation (Libraries.OKHTTP)
+
     // Glide
     implementation Libraries.GLIDE
     kapt Libraries.GLIDE_COMPILER

@@ -1,10 +1,10 @@
-package kr.yooreka.practice.data.datastore
+package kr.yooreka.practice.data.module
 
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.components.SingletonComponent
+import kr.yooreka.practice.data.service.GithubService
 import kr.yooreka.practice.data.repository.GithubRepositoryImpl
 import kr.yooreka.practice.domain.repository.GithubRepository
 import okhttp3.OkHttpClient
@@ -46,7 +46,7 @@ object ApiModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient, BASE_URL:String): Retrofit =
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -58,7 +58,5 @@ object ApiModule {
     @Provides
     fun provideApiService(retrofit: Retrofit) : GithubService = retrofit.create(GithubService::class.java)
 
-    @Singleton
-    @Provides
-    fun provideGithubRepository(repository : GithubRepositoryImpl) : GithubRepository = repository
+
 }

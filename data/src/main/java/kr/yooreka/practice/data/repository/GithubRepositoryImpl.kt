@@ -3,7 +3,7 @@ package kr.yooreka.practice.data.repository
 import io.reactivex.rxjava3.core.Single
 import kr.yooreka.practice.data.mapper.ReposMapper
 import kr.yooreka.practice.data.mapper.UserMapper
-import kr.yooreka.practice.data.datastore.GithubService
+import kr.yooreka.practice.data.service.GithubService
 import kr.yooreka.practice.domain.model.ReposVO
 import kr.yooreka.practice.domain.model.UserVO
 import kr.yooreka.practice.domain.repository.GithubRepository
