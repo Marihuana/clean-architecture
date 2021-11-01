@@ -8,7 +8,7 @@
             type="kr.yooreka.practice.cleancodepractice.viewmodel.SearchViewModel" />
         <variable
             name="item"
-            type="kr.yooreka.practice.cleancodepractice.viewmodel.UserVO" />
+            type="kr.yooreka.practice.domain.model.UserVO" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
