@@ -1,5 +1,6 @@
 package kr.yooreka.practice.cleancodepractice.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
@@ -20,5 +21,9 @@ open class BaseViewModel : ViewModel() {
     override fun onCleared() {
         super.onCleared()
         disposeAll()
+    }
+
+    protected fun onError(t : Throwable){
+        Log.e("error", t.stackTraceToString())
     }
 }

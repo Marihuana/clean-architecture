@@ -1,16 +1,13 @@
 package kr.yooreka.practice.domain.usecase
 
-import io.reactivex.rxjava3.core.Single
+import androidx.paging.PagingData
+import io.reactivex.rxjava3.core.Flowable
 import kr.yooreka.practice.domain.model.ReposVO
 import kr.yooreka.practice.domain.repository.GithubRepository
 
 
-class ReposUseCase (private val gitHubRepository: GithubRepository) {   //Impl 어떻게 주입해야할지...
-    fun getRepositories(userName : String) : Single<List<ReposVO>> {
-        return gitHubRepository.getRepositories(userName)
-            .onErrorReturn {
-                it.printStackTrace()
-                listOf()
-            }
+class ReposUseCase (private val repository: GithubRepository) {
+    fun getRepositories(userName : String) : Flowable<PagingData<ReposVO>> {
+        return repository.getRepositories(userName)
     }
 }
