@@ -9,7 +9,7 @@ apply from: rootProject.file("android.gradle")
 
 dependencies {
     implementation project(":data")
-    implementation (project(":domain")) { transitive = false }
+    implementation project(":domain")
     implementation project(":presentation")
 
     implementation AndroidX.CORE_KTX
@@ -23,18 +23,6 @@ dependencies {
     //lifecycle
     implementation AndroidX.LIFECYCLE_VIEWMODEL_KTX
     implementation AndroidX.LIFECYCLE_LIVEDATA_KTX
-
-    //paging
-    implementation (Paging.PAGING)
-    implementation (Paging.PAGING_RXJAVA3)
-
-    // rx
-    implementation (ReactiveX.RX_KOTLIN)
-
-    // retrofit
-    implementation (Libraries.RETROFIT)
-    // okhttp
-    implementation (Libraries.OKHTTP)
 
     // Glide
     implementation Libraries.GLIDE
