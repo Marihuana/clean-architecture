@@ -5,8 +5,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kr.yooreka.practice.data.service.GithubService
-import kr.yooreka.practice.data.repository.GithubRepositoryImpl
-import kr.yooreka.practice.domain.repository.GithubRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
