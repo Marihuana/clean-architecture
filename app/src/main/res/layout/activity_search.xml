@@ -35,7 +35,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textColor="@color/default_text_color"
-                android:text="@={viewModel.inputText}"
                 android:textSize="@dimen/header_font_dp_size"
                 android:background="@drawable/shape_rectangle_white_8dp"
                 android:layout_margin="4dp"
@@ -53,6 +52,17 @@
             app:layout_constraintTop_toBottomOf="@id/loSearch"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:listitem="@layout/item_user"
+            />
+
+        <ProgressBar
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isLoading == true ? View.VISIBLE : View.GONE }"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

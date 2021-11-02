@@ -7,7 +7,6 @@ object Versions {
     const val APP_COMPAT = "1.3.1"
     const val ACTIVITY_KTX = "1.2.3"
     const val LIFECYCLE_KTX = "2.3.1"
-    const val PAGING = "3.0.1"
 
     const val HILT = "2.37"
     const val MATERIAL = "1.4.0"
@@ -35,12 +34,6 @@ object AndroidX {
 
     const val LIFECYCLE_VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_KTX}"
     const val LIFECYCLE_LIVEDATA_KTX  = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.LIFECYCLE_KTX}"
-}
-
-object Paging {
-    const val PAGING = "androidx.paging:paging-runtime:${Versions.PAGING}"
-    const val PAGING_COMMON = "androidx.paging:paging-common:${Versions.PAGING}"
-    const val PAGING_RXJAVA3 = "androidx.paging:paging-rxjava3:${Versions.PAGING}"
 }
 
 object Google {

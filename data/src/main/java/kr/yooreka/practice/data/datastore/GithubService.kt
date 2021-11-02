@@ -1,4 +1,4 @@
-package kr.yooreka.practice.data.service
+package kr.yooreka.practice.data.datastore
 
 import io.reactivex.rxjava3.core.Single
 import kr.yooreka.practice.data.entity.ReposRes
