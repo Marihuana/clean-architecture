@@ -4,11 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="viewModel"
-            type="kr.yooreka.practice.cleancodepractice.viewmodel.SearchViewModel" />
-        <variable
             name="item"
-            type="kr.yooreka.practice.cleancodepractice.viewmodel.UserVO" />
+            type="kr.yooreka.practice.domain.model.UserVO" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,6 +33,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:text="@{item.name}"
             android:textColor="@color/black"
             android:textSize="@dimen/list_item_font_sp_size"
             android:textStyle="bold"
