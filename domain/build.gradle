@@ -9,6 +9,9 @@ java {
 }
 
 dependencies {
+    implementation (Kotlin.KOTLIN_STDLIB)
     // rx
     implementation (ReactiveX.RX_KOTLIN)
+    //paging common
+    implementation files('lib/paging-common-3.0.0.jar')
 }
