@@ -1,4 +1,4 @@
-package kr.yooreka.practice.cleancodepractice.util
+package kr.yooreka.practice.presentation.view
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

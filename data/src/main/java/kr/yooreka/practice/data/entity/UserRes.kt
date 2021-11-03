@@ -1,7 +1,6 @@
 package kr.yooreka.practice.data.entity
 
 import com.google.gson.annotations.SerializedName
-import kr.yooreka.practice.domain.model.UserVO
 
 data class UserRes (
     @SerializedName("total_count") var total : Long,

@@ -1,4 +1,4 @@
-package kr.yooreka.practice.cleancodepractice.di
+package kr.yooreka.practice.cleancodepractice.module
 
 import dagger.Module
 import dagger.Provides

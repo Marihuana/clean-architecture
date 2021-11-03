@@ -1,4 +1,4 @@
-package kr.yooreka.practice.data.module
+package kr.yooreka.practice.cleancodepractice.module
 
 import dagger.Module
 import dagger.Provides
@@ -16,10 +16,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiModule {
-    const val BASE_URL : String = "https://api.github.com/"
-    const val TIMEOUT_CONNECT = 10L
-    const val TIMEOUT_READ = 10L
-    const val TIMEOUT_WRITE = 10L
+    private const val BASE_URL : String = "https://api.github.com/"
+    private const val TIMEOUT_CONNECT = 10L
+    private const val TIMEOUT_READ = 10L
+    private const val TIMEOUT_WRITE = 10L
 
     @Singleton
     @Provides
@@ -40,6 +40,7 @@ object ApiModule {
         }
         .connectTimeout(TIMEOUT_CONNECT, TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS)
+        .writeTimeout(TIMEOUT_WRITE, TimeUnit.SECONDS)
         .build()
 
     @Singleton

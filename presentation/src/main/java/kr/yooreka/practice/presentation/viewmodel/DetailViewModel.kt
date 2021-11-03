@@ -1,4 +1,4 @@
-package kr.yooreka.practice.cleancodepractice.viewmodel
+package kr.yooreka.practice.presentation.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,7 @@ import kr.yooreka.practice.domain.usecase.ReposUseCase
 import javax.inject.Inject
 
 @HiltViewModel
-class RepositoryViewModel @Inject constructor(val useCase : ReposUseCase) : BaseViewModel() {
+class DetailViewModel @Inject constructor(val useCase : ReposUseCase) : BaseViewModel() {
 
     private val _items = MutableLiveData<PagingData<ReposVO>>()
     val items : MutableLiveData<PagingData<ReposVO>> get() = _items

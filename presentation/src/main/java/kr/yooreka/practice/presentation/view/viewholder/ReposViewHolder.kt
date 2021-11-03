@@ -1,8 +1,8 @@
-package kr.yooreka.practice.cleancodepractice.viewholder
+package kr.yooreka.practice.presentation.view.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
-import kr.yooreka.practice.cleancodepractice.databinding.ItemRepositoryBinding
 import kr.yooreka.practice.domain.model.ReposVO
+import kr.yooreka.practice.presentation.databinding.ItemRepositoryBinding
 
 class ReposViewHolder (
     private val binding : ItemRepositoryBinding,

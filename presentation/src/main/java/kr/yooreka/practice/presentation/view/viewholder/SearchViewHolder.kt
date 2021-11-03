@@ -1,8 +1,8 @@
-package kr.yooreka.practice.cleancodepractice.viewholder
+package kr.yooreka.practice.presentation.view.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
-import kr.yooreka.practice.cleancodepractice.databinding.ItemUserBinding
 import kr.yooreka.practice.domain.model.UserVO
+import kr.yooreka.practice.presentation.databinding.ItemUserBinding
 
 class SearchViewHolder(
     private val binding : ItemUserBinding,

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <import type="android.view.View" />
+    <variable
+        name="viewModel"
+        type="kr.yooreka.practice.presentation.viewmodel.SearchViewModel" />
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/loSearch"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/default_text_color"
+            android:text="@={viewModel.inputText}"
+            android:textSize="@dimen/header_font_dp_size"
+            android:background="@drawable/shape_rectangle_white_8dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUser"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/loSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_user"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

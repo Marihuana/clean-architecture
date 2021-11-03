@@ -1,7 +1,6 @@
 package kr.yooreka.practice.data.entity
 
 import com.google.gson.annotations.SerializedName
-import kr.yooreka.practice.domain.model.ReposVO
 
 data class ReposRes(
     @SerializedName("id") var id : Long,

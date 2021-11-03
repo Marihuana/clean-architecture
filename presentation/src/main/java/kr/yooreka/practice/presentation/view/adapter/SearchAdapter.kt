@@ -1,13 +1,12 @@
-package kr.yooreka.practice.cleancodepractice.adapter
+package kr.yooreka.practice.presentation.view.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import kr.yooreka.practice.cleancodepractice.databinding.ItemUserBinding
-import kr.yooreka.practice.cleancodepractice.viewholder.SearchViewHolder
 import kr.yooreka.practice.domain.model.UserVO
+import kr.yooreka.practice.presentation.databinding.ItemUserBinding
+import kr.yooreka.practice.presentation.view.viewholder.SearchViewHolder
 
 class SearchAdapter(private val listener : (UserVO)-> Unit) : PagingDataAdapter<UserVO, SearchViewHolder>(diffCallback) {
 

@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@mipmap/ic_launcher"
+            android:src="@android:mipmap/sym_def_app_icon"
             app:imgUrl="@{item.thumbUrl}"
             />
 

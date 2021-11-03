@@ -1,4 +1,4 @@
-package kr.yooreka.practice.cleancodepractice.view
+package kr.yooreka.practice.presentation.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,11 +9,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import kr.yooreka.practice.cleancodepractice.R
-import kr.yooreka.practice.cleancodepractice.adapter.SearchAdapter
-import kr.yooreka.practice.cleancodepractice.databinding.ActivitySearchBinding
-import kr.yooreka.practice.cleancodepractice.viewmodel.SearchViewModel
 import kr.yooreka.practice.domain.model.UserVO
+import kr.yooreka.practice.presentation.R
+import kr.yooreka.practice.presentation.databinding.ActivitySearchBinding
+import kr.yooreka.practice.presentation.view.adapter.SearchAdapter
+import kr.yooreka.practice.presentation.viewmodel.SearchViewModel
 
 @AndroidEntryPoint
 class SearchActivity : AppCompatActivity() {
@@ -56,7 +56,7 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun onItemClicked(item : UserVO){
-        Intent(this@SearchActivity, RepositoryActivity::class.java)
+        Intent(this@SearchActivity, DetailActivity::class.java)
             .apply { putExtra("user", item) }
             .run {
                 startActivity(this)

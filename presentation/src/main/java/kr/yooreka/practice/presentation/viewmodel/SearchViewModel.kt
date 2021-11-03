@@ -1,4 +1,4 @@
-package kr.yooreka.practice.cleancodepractice.viewmodel
+package kr.yooreka.practice.presentation.viewmodel
 
 import android.util.Log
 import androidx.databinding.ObservableField

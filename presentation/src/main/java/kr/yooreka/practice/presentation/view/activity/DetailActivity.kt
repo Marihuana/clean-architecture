@@ -1,6 +1,5 @@
-package kr.yooreka.practice.cleancodepractice.view
+package kr.yooreka.practice.presentation.view.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,20 +8,19 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import kr.yooreka.practice.cleancodepractice.R
-import kr.yooreka.practice.cleancodepractice.adapter.RepositoriesAdapter
-import kr.yooreka.practice.cleancodepractice.adapter.SearchAdapter
-import kr.yooreka.practice.cleancodepractice.databinding.ActivityRepositoryBinding
-import kr.yooreka.practice.cleancodepractice.viewmodel.RepositoryViewModel
 import kr.yooreka.practice.domain.model.ReposVO
 import kr.yooreka.practice.domain.model.UserVO
+import kr.yooreka.practice.presentation.R
+import kr.yooreka.practice.presentation.databinding.ActivityDetailBinding
+import kr.yooreka.practice.presentation.view.adapter.RepositoriesAdapter
+import kr.yooreka.practice.presentation.viewmodel.DetailViewModel
 
 @AndroidEntryPoint
-class RepositoryActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity() {
 
-    private val viewModel : RepositoryViewModel by viewModels()
+    private val viewModel : DetailViewModel by viewModels()
 
-    lateinit var binding : ActivityRepositoryBinding
+    lateinit var binding : ActivityDetailBinding
     lateinit var recyclerView: RecyclerView
 
     var selected : UserVO? = null
@@ -31,10 +29,10 @@ class RepositoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         selected = intent.getSerializableExtra("user") as UserVO
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_repository)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
         binding.apply {
-            this.viewModel = this@RepositoryActivity.viewModel
-            this.lifecycleOwner = this@RepositoryActivity
+            this.viewModel = this@DetailActivity.viewModel
+            this.lifecycleOwner = this@DetailActivity
             this.user = selected
         }
 
@@ -51,7 +49,7 @@ class RepositoryActivity : AppCompatActivity() {
             viewModel.getRepositories(selected!!.name)
 
             recyclerView = binding.rvRepository.apply {
-                layoutManager = LinearLayoutManager(this@RepositoryActivity)
+                layoutManager = LinearLayoutManager(this@DetailActivity)
                 adapter = RepositoriesAdapter(::onItemClicked)
             }
         }

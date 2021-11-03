@@ -1,12 +1,12 @@
-package kr.yooreka.practice.cleancodepractice.adapter
+package kr.yooreka.practice.presentation.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import kr.yooreka.practice.cleancodepractice.databinding.ItemRepositoryBinding
-import kr.yooreka.practice.cleancodepractice.viewholder.ReposViewHolder
 import kr.yooreka.practice.domain.model.ReposVO
+import kr.yooreka.practice.presentation.databinding.ItemRepositoryBinding
+import kr.yooreka.practice.presentation.view.viewholder.ReposViewHolder
 
 class RepositoriesAdapter(private val listener : (ReposVO)-> Unit) : PagingDataAdapter<ReposVO, ReposViewHolder>(diffCallback) {
 
