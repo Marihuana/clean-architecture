@@ -48,6 +48,7 @@ object Google {
     const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
 
     const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+    const val GSON = "com.google.code.gson:gson:2.8.5"
 }
 
 object ReactiveX{

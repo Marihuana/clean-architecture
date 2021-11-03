@@ -16,13 +16,7 @@ dependencies {
 
     // retrofit
     implementation (Libraries.RETROFIT)
-    implementation (Libraries.RETROFIT_CONVERTER_GSON)
-    implementation (Libraries.RETROFIT_ADAPTER_RXJAVA)
-
-    // okhttp
-    implementation (Libraries.OKHTTP)
-//  implementation (Square.OkHttp.OKHTTP_SSE)
-    implementation (Libraries.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation Google.GSON
 
     //paging
     implementation (Paging.PAGING)

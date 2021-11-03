@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: rootProject.file("android.gradle")
@@ -13,6 +15,28 @@ dependencies {
     implementation(AndroidX.APP_COMPAT)
     implementation(AndroidX.CONSTRAINT_LAYOUT)
     implementation(Google.MATERIAL)
+
+    // Activity (ViewModels)
+    implementation AndroidX.ACTIVITY_KTX
+
+    //lifecycle
+    implementation AndroidX.LIFECYCLE_VIEWMODEL_KTX
+    implementation AndroidX.LIFECYCLE_LIVEDATA_KTX
+
+    //paging
+    implementation (Paging.PAGING)
+    implementation (Paging.PAGING_RXJAVA3)
+
+    // rx
+    implementation (ReactiveX.RX_KOTLIN)
+
+    // Glide
+    implementation Libraries.GLIDE
+    kapt Libraries.GLIDE_COMPILER
+
+    //DI - hilt
+    implementation Google.HILT_ANDROID
+    kapt Google.HILT_ANDROID_COMPILER
 
     testImplementation "junit:junit:${Versions.JUNIT}"
     androidTestImplementation "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"

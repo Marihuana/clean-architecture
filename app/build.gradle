@@ -17,28 +17,15 @@ dependencies {
     implementation AndroidX.CONSTRAINT_LAYOUT
     implementation Google.MATERIAL
 
-    // Activity (ViewModels)
-    implementation AndroidX.ACTIVITY_KTX
-
-    //lifecycle
-    implementation AndroidX.LIFECYCLE_VIEWMODEL_KTX
-    implementation AndroidX.LIFECYCLE_LIVEDATA_KTX
-
-    //paging
-    implementation (Paging.PAGING)
-    implementation (Paging.PAGING_RXJAVA3)
-
-    // rx
-    implementation (ReactiveX.RX_KOTLIN)
-
     // retrofit
     implementation (Libraries.RETROFIT)
+    implementation (Libraries.RETROFIT_CONVERTER_GSON)
+    implementation (Libraries.RETROFIT_ADAPTER_RXJAVA)
+
     // okhttp
     implementation (Libraries.OKHTTP)
-
-    // Glide
-    implementation Libraries.GLIDE
-    kapt Libraries.GLIDE_COMPILER
+    implementation (Libraries.OKHTTP_SSE)
+    implementation (Libraries.OKHTTP_LOGGING_INTERCEPTOR)
 
     //DI - hilt
     implementation Google.HILT_ANDROID
