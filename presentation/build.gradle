@@ -27,8 +27,8 @@ dependencies {
     implementation (Paging.PAGING)
     implementation (Paging.PAGING_RXJAVA3)
 
-    // rx
-    implementation (ReactiveX.RX_KOTLIN)
+    // coroutine
+    implementation (Kotlin.COROUTINES_ANDROID)
 
     // Glide
     implementation Libraries.GLIDE

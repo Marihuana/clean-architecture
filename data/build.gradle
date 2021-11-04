@@ -11,17 +11,13 @@ dependencies {
     implementation (project(":domain")) { transitive = false }
 
     implementation AndroidX.CORE_KTX
-    implementation AndroidX.APP_COMPAT
-    implementation Google.MATERIAL
-
+    //coroutine
+    implementation Kotlin.COROUTINES_ANDROID
     // retrofit
     implementation (Libraries.RETROFIT)
-    implementation Google.GSON
-
+    implementation (Libraries.RETROFIT_CONVERTER_GSON)
     //paging
     implementation (Paging.PAGING)
-    implementation (Paging.PAGING_RXJAVA3)
-
     //DI - hilt
     implementation (Google.HILT_ANDROID)
     kapt (Google.HILT_ANDROID_COMPILER)
